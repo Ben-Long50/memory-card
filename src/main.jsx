@@ -1,12 +1,11 @@
 import React from 'react';
 import ReactDOM from 'react-dom/client';
-import Card from './Card';
-import Gameboard from './Gameboard';
-import './main.css';
+import App from './App';
+import './styles/main.css';
+import './styles/reset-css.css';
 
 ReactDOM.createRoot(document.getElementById('root')).render(
   <React.StrictMode>
-    {/* <Header /> */}
-    <Gameboard />
+    <App />
   </React.StrictMode>,
 );
