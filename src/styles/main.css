@@ -18,9 +18,9 @@ html {
 
 #root {
   --background-color: rgb(202, 184, 150);
-  --fs-1: 3rem;
-  --fs-2: 2rem;
-  --fs-3: 1.5rem;
+  --fs-1: clamp(2rem, 3vw, 3rem);
+  --fs-2: clamp(1rem, 2vw, 2rem);
+  --fs-3: clamp(1rem, 2vw, 1.5rem);
   margin: 0;
   padding: 0;
   width: 100vw;
@@ -58,8 +58,9 @@ html {
 .header-info-container {
   display: flex;
   justify-content: space-evenly;
+  flex-wrap: wrap;
   align-items: center;
-  gap: 3rem;
+  gap: 1.5rem;
   white-space: nowrap;
 }
 
@@ -97,7 +98,7 @@ input {
 
 .gameboard-container {
   box-sizing: border-box;
-  padding: 2rem 2rem;
+  padding: 2rem;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -226,12 +227,26 @@ input {
     gap: 0.5rem;
     align-items: flex-start;
   }
+  .gameboard-container {
+    padding: 1rem;
+    justify-content: flex-start;
+  }
+  .gameboard {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1vw;
+  }
+  .img-card {
+    border-radius: 2vw;
+  }
+  .card-back {
+    border-radius: 2vw;
+  }
 }
 
 @media (max-width: 700px) {
   .header {
     flex-direction: column;
-    gap: 2rem;
+    gap: 1rem;
     align-items: flex-start;
   }
 }
