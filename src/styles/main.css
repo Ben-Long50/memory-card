@@ -123,6 +123,7 @@ input {
   grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
   gap: 1vw;
   max-width: 1250px;
+  perspective: 1500px;
 }
 
 .footer {
@@ -147,11 +148,14 @@ input {
 .img-card {
   width: 100%;
   border-radius: 12px;
-  perspective: 100px;
+  transition: transform 0.1s ease;
 }
 
-.img-card-container:hover {
-  /* transform: scale(1.1); */
+.img-card:hover {
+  transform: scale(1.1);
+}
+
+.card-animation {
   animation: 0.75s flip-card 1 ease-in-out;
 }
 

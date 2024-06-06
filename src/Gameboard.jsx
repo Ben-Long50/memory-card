@@ -49,7 +49,6 @@ export default function Gameboard({
           setLoadedCount(fetchedArray.length);
         }
       }
-      console.log(fetchedArray);
       setLoading(false);
       setCardArray(fetchedArray);
     }

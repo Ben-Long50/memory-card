@@ -15,14 +15,13 @@ export default function Card({
   }
 
   return (
-    <div className="img-card-container">
-      <img
-        className="img-card"
-        id={id}
-        src={imageUrl}
-        alt={name}
-        onClick={onClick}
-      />
-    </div>
+    <img
+      className="img-card card-animation"
+      key={Math.random()}
+      id={id}
+      src={imageUrl}
+      alt={name}
+      onClick={onClick}
+    />
   );
 }
