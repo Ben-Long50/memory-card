@@ -89,7 +89,7 @@ input {
   font-size: var(--fs-2);
   border: 2px solid rgb(49, 49, 49);
   border-radius: 8px;
-  width: calc(var(--fs-2) * 1.5);
+  max-width: 100px;
   text-align: center;
   font-family: 'rubik';
   text-shadow: 1.5px 1.5px 3px rgb(255, 255, 255);

@@ -40,7 +40,7 @@ export default function Gameboard({
       while (fetchedArray.length < count) {
         let cardInfo = await fetchData();
         fetchedArray.forEach((item) => {
-          if (item.id === cardInfo.id) {
+          if (cardInfo === null || item.id === cardInfo.id) {
             cardInfo = null;
           }
         });
