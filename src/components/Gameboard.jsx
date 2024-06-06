@@ -1,6 +1,6 @@
 import { useState, useEffect } from 'react';
 import Card from './Card';
-import './styles/main.css';
+import '../styles/main.css';
 
 export default function Gameboard({
   count,

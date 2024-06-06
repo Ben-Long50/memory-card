@@ -2,7 +2,7 @@ import { useState } from 'react';
 import Header from './Header';
 import Gameboard from './Gameboard';
 import Footer from './Footer';
-import './styles/main.css';
+import '../styles/main.css';
 
 export default function App() {
   const [cardCount, setCardCount] = useState(15);
@@ -10,7 +10,11 @@ export default function App() {
   const [highScore, setHighScore] = useState(0);
 
   function editCount(value) {
-    setCardCount(value);
+    if (value < 101) {
+      setCardCount(value);
+    } else {
+      alert('The maximum allowed card count is 100');
+    }
   }
 
   function updateScore(value) {

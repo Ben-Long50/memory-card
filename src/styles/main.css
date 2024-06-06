@@ -1,15 +1,15 @@
 @font-face {
   font-family: 'goudy-mediaeval';
-  src: url('./src/public/Goudy Mediaeval DemiBold.ttf');
+  src: url('../public/Goudy Mediaeval DemiBold.ttf');
 }
 
 @font-face {
   font-family: 'rubik';
-  src: url('./src/public/Rubik.ttf');
+  src: url('../public/Rubik.ttf');
 }
 
 html {
-  background-image: url('./src/public/wood-background.jpg');
+  background-image: url('../public/wood-background.jpg');
   background-size: cover;
   background-position: center;
   background-attachment: fixed;
@@ -166,6 +166,7 @@ input {
   grid-column: 1;
   grid-row: 1;
   width: 100%;
+  height: 100%;
   max-width: 400px;
   background-image: url('./src/public/mtg-card-back.jpg');
   background-position: center;

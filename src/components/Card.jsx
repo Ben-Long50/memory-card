@@ -1,4 +1,5 @@
-import './styles/main.css';
+import '../styles/main.css';
+import mtgCardBack from '../public/mtg-card-back.jpg';
 
 export default function Card({
   id,
@@ -24,11 +25,7 @@ export default function Card({
         alt={name}
         onClick={onClick}
       />
-      <img
-        className="card-back"
-        key={Math.random()}
-        src="./src/public/mtg-card-back.jpg"
-      />
+      <img className="card-back" key={Math.random()} src={mtgCardBack} />
     </div>
   );
 }
