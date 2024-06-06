@@ -16,7 +16,7 @@ export default function Card({
 
   return (
     <img
-      className="img-card"
+      className="img-card .img-card-flip "
       id={id}
       src={imageUrl}
       alt={name}

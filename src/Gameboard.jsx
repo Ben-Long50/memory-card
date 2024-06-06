@@ -38,9 +38,16 @@ export default function Gameboard({
     async function fetchCards() {
       const fetchedArray = [];
       while (fetchedArray.length < count) {
-        const cardInfo = await fetchData();
-        fetchedArray.push(cardInfo);
-        setLoadedCount(fetchedArray.length);
+        let cardInfo = await fetchData();
+        fetchedArray.forEach((item) => {
+          if (item.id === cardInfo.id) {
+            cardInfo = null;
+          }
+        });
+        if (cardInfo !== null) {
+          fetchedArray.push(cardInfo);
+          setLoadedCount(fetchedArray.length);
+        }
       }
       console.log(fetchedArray);
       setLoading(false);
