@@ -101,6 +101,7 @@ input {
   display: flex;
   flex-direction: column;
   align-items: center;
+  justify-content: center;
   flex-grow: 1;
 }
 
@@ -111,7 +112,6 @@ input {
   background-color: var(--background-color);
   border-radius: 1rem;
   font-size: 3rem;
-  justify-self: center;
   font-family: 'goudy-mediaeval';
   letter-spacing: 0.25rem;
 }
@@ -120,10 +120,9 @@ input {
   width: 100%;
   min-height: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(220px, 1fr));
-  gap: 1vw;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1rem;
   max-width: 1250px;
-  perspective: 1500px;
 }
 
 .footer {
@@ -141,39 +140,82 @@ input {
   bottom: 0;
 }
 
-.img-card-container {
-  width: 100%;
+.card-stack {
+  display: grid;
+  grid-template: 1fr / 1fr;
+  place-items: center;
+  perspective: 100cm;
 }
 
 .img-card {
+  grid-column: 1;
+  grid-row: 1;
   width: 100%;
-  border-radius: 12px;
+  border-radius: 16px;
   transition: transform 0.1s ease;
+  max-width: 400px;
+  justify-self: center;
+  z-index: 2;
 }
 
 .img-card:hover {
   transform: scale(1.1);
 }
 
-.card-animation {
-  animation: 0.75s flip-card 1 ease-in-out;
+.card-back {
+  grid-column: 1;
+  grid-row: 1;
+  width: 100%;
+  max-width: 400px;
+  background-image: url('./src/public/mtg-card-back.jpg');
+  background-position: center;
+  background-size: cover;
+  animation: 0.6s flip-back 1 ease-in-out;
+  border-radius: 16px;
+  z-index: 1;
 }
 
-@keyframes flip-card {
+.card-animation {
+  animation: 0.6s flip-front 1 ease-in-out;
+}
+
+@keyframes flip-front {
+  0% {
+    transform: rotate3d(0, 1, 0, 180deg);
+    opacity: 0;
+  }
+
+  50% {
+    opacity: 0;
+  }
+
+  51% {
+    opacity: 1;
+  }
+
+  100% {
+    transform: rotate3d(0, 1, 0, 360deg);
+    opacity: 1;
+  }
+}
+
+@keyframes flip-back {
   0% {
     transform: rotate3d(0, 1, 0, 0deg);
     opacity: 1;
   }
 
   50% {
-    transform: rotate3d(0, 1, 0, 180deg);
-    animation-timing-function: ease-in-out;
+    opacity: 1;
+  }
+
+  51% {
     opacity: 0;
   }
 
   100% {
-    transform: rotate3d(0, 1, 0, 360deg);
-    opacity: 1;
+    transform: rotate3d(0, 1, 0, 180deg);
+    opacity: 0;
   }
 }
 
