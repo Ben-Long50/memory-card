@@ -5,7 +5,7 @@ import Footer from './Footer';
 import './styles/main.css';
 
 export default function App() {
-  const [cardCount, setCardCount] = useState(16);
+  const [cardCount, setCardCount] = useState(15);
   const [score, setScore] = useState(0);
   const [highScore, setHighScore] = useState(0);
 

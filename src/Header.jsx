@@ -1,5 +1,3 @@
-import Icon from '@mdi/react';
-import { mdiCards } from '@mdi/js';
 import { useState } from 'react';
 
 export default function Header({ count, score, highScore, editCount }) {
@@ -8,7 +6,6 @@ export default function Header({ count, score, highScore, editCount }) {
   return (
     <header className="header font">
       <div className="header-title-container">
-        {/* <Icon path={mdiCards} size={2} /> */}
         <h1 className="header-title">MTG Memorization Challenge</h1>
       </div>
       <div className="header-info-container">

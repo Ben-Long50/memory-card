@@ -15,12 +15,14 @@ export default function Card({
   }
 
   return (
-    <img
-      className="img-card .img-card-flip "
-      id={id}
-      src={imageUrl}
-      alt={name}
-      onClick={onClick}
-    />
+    <div className="img-card-container">
+      <img
+        className="img-card"
+        id={id}
+        src={imageUrl}
+        alt={name}
+        onClick={onClick}
+      />
+    </div>
   );
 }

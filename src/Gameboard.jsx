@@ -24,7 +24,7 @@ export default function Gameboard({
       return {
         id: cardData.id,
         name: cardData.name,
-        image: cardData.image_uris.png,
+        image: cardData.image_uris.normal,
       };
     } catch {
       return null;
